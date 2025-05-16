@@ -1,0 +1,39 @@
+{
+    "welcome_back": "Welcome Back!",
+    "you_Can_Continue_With": "You Can Continue With",
+    "dont_have_an_account": "Don’t have an account",
+    "already_have_an_account": "Already have an account?",
+    "create_an_account": "Create an account",
+    "remember_me": "Remember Me",
+    "please_enter_following_data": "Please enter the following data.",
+    "button": {
+        "sign_in": "Sign In",
+        "sign_up": "Sign Up",
+        "forgot_password": "Forgot your password?",
+        "skip": "Skip",
+        "get_started": "Get Started",
+        "save_your_mood": "Save Your Mood",
+        "Next": "Next"
+    },
+    "inputfield": {
+        "Name": "Name",
+        "Name_hint": "Ex: John Mark",
+        "email": "Email",
+        "email_hint": "Example@gmail.com",
+        "password": "Password",
+        "password_hint": "Enter your password",
+        "c_password": "Password Confirmation",
+        "c_password_hint": "Please confirm your password"
+    },
+    "face_id_setup": "Face Id Setup",
+    "hassle_free_logins_txt": "Hassle-free logins every time. Connect with Face ID and experience a new level of ease in managing your account",
+    "lets_know_each_other": "Let’s know each other!",
+    "let_the_for_you_page_text": "Let the for you page be more specific for who you are!",
+    "daily_mood": "Daily Mood",
+    "drag_to_log_your_mood": "Drag to log Your mood",
+    "for_you": "For You",
+    "calender": "Calendar",
+    "jounal": "Journal",
+    "streaks": "Streaks",
+    "settings": "Settings"
+}
