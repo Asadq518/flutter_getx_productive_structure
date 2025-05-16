@@ -1,8 +1,3 @@
-Here's your enhanced and polished `README.md` for your **Flutter Clean Architecture Project**. This version improves structure, formatting, and adds missing elements such as logo placeholders, GitHub badges, and clearer call-to-actions.
-
----
-
-```md
 # 📱 Flutter Project Architecture
 
 A scalable and modular Flutter starter project built with **GetX**, **Clean Architecture**, **Firebase**, and **Secure Storage**. Designed for production-ready mobile apps with built-in state management, localization, networking, theming, and asset generation.
