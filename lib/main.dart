@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 import 'app/core/core.dart';
 import 'app/routes/app_pages.dart';
 import 'binding/app_binding.dart';
 
-void main() {
-  // WidgetsFlutterBinding.ensureInitialized();
-  //   await Firebase.initializeApp(
-  //   options: DefaultFirebaseOptions.currentPlatform,
-  // );
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+    await Firebase.initializeApp(
+    // options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(
     GetMaterialApp(
       title: AppConfig.appName,
