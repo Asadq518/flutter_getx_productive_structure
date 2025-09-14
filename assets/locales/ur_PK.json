@@ -1,0 +1,54 @@
+{
+    "welcome_back": "خوش آمدید!",
+    "you_Can_Continue_With": "آپ جاری رکھ سکتے ہیں",
+    "dont_have_an_account": "اکاؤنٹ نہیں ہے؟",
+    "already_have_an_account": "پہلے سے اکاؤنٹ موجود ہے؟",
+    "create_an_account": "اکاؤنٹ بنائیں",
+    "remember_me": "مجھے یاد رکھیں",
+    "please_enter_following_data": "براہ کرم درج ذیل معلومات درج کریں۔",
+    "button": {
+      "sign_in": "سائن اِن",
+      "sign_up": "سائن اَپ",
+      "forgot_password": "پاس ورڈ بھول گئے؟",
+      "skip": "چھوڑ دیں",
+      "get_started": "شروع کریں",
+      "save_your_mood": "اپنا موڈ محفوظ کریں",
+      "Next": "اگلا"
+    },
+    "inputfield": {
+      "Name": "نام",
+      "Name_hint": "مثال: جان مارک",
+      "email": "ای میل",
+      "email_hint": "example@gmail.com",
+      "password": "پاس ورڈ",
+      "password_hint": "اپنا پاس ورڈ درج کریں",
+      "c_password": "پاس ورڈ کی تصدیق",
+      "c_password_hint": "براہ کرم اپنا پاس ورڈ تصدیق کریں"
+    },
+    "face_id_setup": "فیس آئی ڈی سیٹ اپ",
+    "hassle_free_logins_txt": "ہر بار بلا دقت لاگ اِن۔ فیس آئی ڈی سے جڑیں اور اپنے اکاؤنٹ میں آسانی کے ساتھ داخل ہوں۔",
+    "lets_know_each_other": "چلیں، ایک دوسرے کو جانتے ہیں!",
+    "let_the_for_you_page_text": "فور یو صفحہ کو آپ کے حساب سے زیادہ مخصوص بنائیں!",
+    "daily_mood": "روزانہ موڈ",
+    "drag_to_log_your_mood": "اپنا موڈ لاگ کرنے کیلئے ڈریگ کریں",
+    "for_you": "آپ کیلئے",
+    "calender": "کیلنڈر",
+    "jounal": "جرنل",
+    "streaks": "سٹریکس",
+    "settings": "سیٹنگز",
+    "dashboard": "ڈیش بورڈ",
+    "overview": "جائزہ",
+    "inventory": "انفنٹری",
+    "pending": "زیر التواء",
+    "low_stock": "کم اسٹاک",
+    "recent_activities": "حالیہ سرگرمیاں",
+
+    "received_items": "موصولہ اشیاء",
+    "shipped_order": "بھیجا گیا آرڈر",
+    "low_stock_alert": "کم اسٹاک الرٹ",
+
+    "hours_ago": "گھنٹے پہلے",
+    "days_ago": "دن پہلے"
+  }
+
+  

@@ -16,55 +16,60 @@ class AuthView extends StatelessWidget {
       appBar: AppBar(title: const Text('Auth Example')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Obx(() => Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TextFormField(
-              controller: emailController,
-              decoration: const InputDecoration(
-                labelText: "Email",
-                border: OutlineInputBorder(),
-              ),
-            ),
-            const SizedBox(height: 10),
-            TextFormField(
-              controller: passwordController,
-              obscureText: true,
-              decoration: const InputDecoration(
-                labelText: "Password",
-                border: OutlineInputBorder(),
-              ),
-            ),
-            const SizedBox(height: 20),
-            controller.isLoading.value
-                ? const CircularProgressIndicator()
-                : Column(
+        child: Obx(
+          () => SingleChildScrollView(
+            // Add this line to allow scrolling
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                PrimaryButton(
-                  text: "Login",
-                  onPressed: () => controller.login(
-                    emailController.text.trim(),
-                    passwordController.text.trim(),
+                TextFormField(
+                  controller: emailController,
+                  decoration: const InputDecoration(
+                    labelText: "Email",
+                    border: OutlineInputBorder(),
                   ),
                 ),
                 const SizedBox(height: 10),
-                PrimaryButton(
-                  text: "Register",
-                  onPressed: () => controller.register(
-                    emailController.text.trim(),
-                    passwordController.text.trim(),
+                TextFormField(
+                  controller: passwordController,
+                  obscureText: true,
+                  decoration: const InputDecoration(
+                    labelText: "Password",
+                    border: OutlineInputBorder(),
                   ),
                 ),
-                TextButton(
-                  onPressed: () => controller.resetPassword(
-                    emailController.text.trim(),
-                  ),
-                  child: const Text("Forgot Password?"),
-                ),
+                const SizedBox(height: 20),
+                controller.isLoading.value
+                    ? const CircularProgressIndicator()
+                    : Column(
+                        children: [
+                          PrimaryButton(
+                            text: "Login",
+                            onPressed: () => controller.login(
+                              emailController.text.trim(),
+                              passwordController.text.trim(),
+                            ),
+                          ),
+                          const SizedBox(height: 10),
+                          PrimaryButton(
+                            text: "Register",
+                            onPressed: () => controller.register(
+                              emailController.text.trim(),
+                              passwordController.text.trim(),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () => controller.resetPassword(
+                              emailController.text.trim(),
+                            ),
+                            child: const Text("Forgot Password?"),
+                          ),
+                        ],
+                      ),
               ],
             ),
-          ],
-        )),
+          ),
+        ),
       ),
     );
   }

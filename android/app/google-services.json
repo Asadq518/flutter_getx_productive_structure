@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "874634726547",
+    "project_id": "flutter-getx-architecture",
+    "storage_bucket": "flutter-getx-architecture.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874634726547:android:e6e3544c35cbf136ced166",
+        "android_client_info": {
+          "package_name": "com.devitcity.example"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDymU_YposyARrywqChqvXyhpJuC3WXBzA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

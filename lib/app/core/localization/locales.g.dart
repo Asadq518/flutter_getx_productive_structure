@@ -5,6 +5,7 @@
 class AppTranslation {
   static Map<String, Map<String, String>> translations = {
     'en_Us': Locales.en_Us,
+    'ur_PK': Locales.ur_PK,
   };
 }
 
@@ -43,6 +44,15 @@ class LocaleKeys {
   static const jounal = 'jounal';
   static const streaks = 'streaks';
   static const settings = 'settings';
+  static const dashboard = 'dashboard';
+  static const overview = 'overview';
+  static const inventory = 'inventory';
+  static const pending = 'pending';
+  static const low_stock = 'low_stock';
+  static const recent_activities = 'recent_activities';
+  static const received_items = 'received_items';
+  static const shipped_order = 'shipped_order';
+  static const low_stock_alert = 'low_stock_alert';
 }
 
 class Locales {
@@ -82,5 +92,61 @@ class Locales {
     'jounal': 'Journal',
     'streaks': 'Streaks',
     'settings': 'Settings',
+    "dashboard": "Dashboard",
+    "overview": "Overview",
+    "inventory": "Inventory",
+    "pending": "Pending",
+    "low_stock": "Low Stock",
+    "recent_activities": "Recent Activities",
+
+    "received_items": "Received Items",
+    "shipped_order": "Shipped Order",
+    "low_stock_alert": "Low Stock Alert",
+  };
+  static const ur_PK = {
+    'welcome_back': 'خوش آمدید!',
+    'you_Can_Continue_With': 'آپ جاری رکھ سکتے ہیں',
+    'dont_have_an_account': 'اکاؤنٹ نہیں ہے؟',
+    'already_have_an_account': 'پہلے سے اکاؤنٹ موجود ہے؟',
+    'create_an_account': 'اکاؤنٹ بنائیں',
+    'remember_me': 'مجھے یاد رکھیں',
+    'please_enter_following_data': 'براہ کرم درج ذیل معلومات درج کریں۔',
+    'button_sign_in': 'سائن اِن',
+    'button_sign_up': 'سائن اَپ',
+    'button_forgot_password': 'پاس ورڈ بھول گئے؟',
+    'button_skip': 'چھوڑ دیں',
+    'button_get_started': 'شروع کریں',
+    'button_save_your_mood': 'اپنا موڈ محفوظ کریں',
+    'button_Next': 'اگلا',
+    'inputfield_Name': 'نام',
+    'inputfield_Name_hint': 'مثال: جان مارک',
+    'inputfield_email': 'ای میل',
+    'inputfield_email_hint': 'example@gmail.com',
+    'inputfield_password': 'پاس ورڈ',
+    'inputfield_password_hint': 'اپنا پاس ورڈ درج کریں',
+    'inputfield_c_password': 'پاس ورڈ کی تصدیق',
+    'inputfield_c_password_hint': 'براہ کرم اپنا پاس ورڈ تصدیق کریں',
+    'face_id_setup': 'فیس آئی ڈی سیٹ اپ',
+    'hassle_free_logins_txt':
+        'ہر بار بلا دقت لاگ اِن۔ فیس آئی ڈی سے جڑیں اور اپنے اکاؤنٹ میں آسانی کے ساتھ داخل ہوں۔',
+    'lets_know_each_other': 'چلیں، ایک دوسرے کو جانتے ہیں!',
+    'let_the_for_you_page_text':
+        'فور یو صفحہ کو آپ کے حساب سے زیادہ مخصوص بنائیں!',
+    'daily_mood': 'روزانہ موڈ',
+    'drag_to_log_your_mood': 'اپنا موڈ لاگ کرنے کیلئے ڈریگ کریں',
+    'for_you': 'آپ کیلئے',
+    'calender': 'کیلنڈر',
+    'jounal': 'جرنل',
+    'streaks': 'سٹریکس',
+    'settings': 'سیٹنگز',
+    'dashboard': 'ڈیش بورڈ',
+    'overview': 'جائزہ',
+    'inventory': 'انفنٹری',
+    'pending': 'زیر التواء',
+    'low_stock': 'کم اسٹاک',
+    'recent_activities': 'حالیہ سرگرمیاں',
+    'received_items': 'موصولہ اشیاء',
+    'shipped_order': 'بھیجا گیا آرڈر',
+    'low_stock_alert': 'کم اسٹاک الرٹ',
   };
 }

@@ -194,8 +194,9 @@ Future<void> fetchWithPagination<T>({
       list.addAll(result);
     }
 
-    state.value =
-        result.isEmpty && !isLoadMore ? ApisSates.empty : ApisSates.success;
+    state.value = result.isEmpty && !isLoadMore
+        ? ApisSates.empty
+        : ApisSates.success;
   } catch (e) {
     if (!isLoadMore) {
       state.value = ApisSates.error;

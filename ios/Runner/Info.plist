@@ -46,11 +46,10 @@
 		<key>UIApplicationSupportsIndirectInputEvents</key>
 		<true/>
 		<key>UIStatusBarHidden</key>
-		<true/>
+		<false/>
 		<!-- Camera -->
 		<key>NSCameraUsageDescription</key>
 		<string>We need access to your camera for scanning and photo capture.</string>
-
 		<!-- Photo Library -->
 		<key>NSPhotoLibraryUsageDescription</key>
 		<string>We need access to your photo library for selecting images.</string>

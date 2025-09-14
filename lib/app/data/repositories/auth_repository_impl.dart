@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import '../models/user_model.dart';
 import '../services/auth_service.dart';
 import 'auth_repository.dart';
@@ -22,27 +21,4 @@ class AuthRepositoryImpl implements AuthRepository {
 
   @override
   Future<void> logout() => _authService.logout();
-
-  // Firebase methods
-  @override
-  Future<User?> firebaseSignIn(String email, String password) =>
-      _authService.firebaseSignIn(email, password);
-
-  @override
-  Future<User?> firebaseRegister(String email, String password) =>
-      _authService.firebaseRegister(email, password);
-
-  @override
-  Future<void> firebaseResetPassword(String email) =>
-      _authService.firebaseResetPassword(email);
-
-  @override
-  Future<void> firebaseSignOut() => _authService.firebaseSignOut();
-
-  @override
-  User? get firebaseCurrentUser => _authService.firebaseCurrentUser;
-
-  @override
-  Stream<User?> get firebaseAuthStateChanges =>
-      _authService.firebaseAuthStateChanges;
 }

@@ -1,9 +1,11 @@
 import 'package:get/get.dart';
-import '../../../data/repositories/auth_repository_impl.dart';
+import 'package:pcom_app/app/routes/app_pages.dart';
+import '../../../data/repositories/auth_firebase_repository_impl.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthController extends GetxController {
-  final AuthRepositoryImpl _authRepository = AuthRepositoryImpl();
+  final AuthFirebaseRepositoryImpl _authRepository =
+      AuthFirebaseRepositoryImpl();
 
   RxBool isLoading = false.obs;
   Rxn<User> firebaseUser = Rxn<User>();
@@ -20,6 +22,7 @@ class AuthController extends GetxController {
       User? user = await _authRepository.firebaseSignIn(email, password);
       if (user != null) {
         Get.snackbar('Success', 'Logged in as ${user.email}');
+        Get.offAllNamed(Routes.HOME);
       } else {
         Get.snackbar('Error', 'No user returned');
       }
@@ -56,7 +59,7 @@ class AuthController extends GetxController {
   }
 
   Future<void> logout() async {
-    await _authRepository.logout();
+    await _authRepository.firebaseSignOut();
     Get.snackbar('Logged out', 'You have been logged out.');
   }
 }

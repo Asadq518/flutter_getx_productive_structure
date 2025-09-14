@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AppConfig {
   // ───── App Info ─────
   static const String appName = 'MyAwesomeApp';
   static const String version = '1.0.0';
   static const String buildNumber = '100';
-  static const bool isDebugMode = true;
+  static const bool isDebugMode = false;
 
-  static const ThemeMode appDefaultTheme = ThemeMode.light;
+  static ThemeMode appDefaultTheme = ThemeMode.light;
+
+  static Future<void> initThemeMode() async {
+    final prefs = await SharedPreferences.getInstance();
+    final isDark = prefs.getBool('isDarkMode') ?? false;
+    appDefaultTheme = isDark ? ThemeMode.dark : ThemeMode.light;
+  }
 
   // ───── API Config ─────
   static const String baseUrl = 'https://api.myawesomeapp.com/';
@@ -36,5 +43,6 @@ class AppConfig {
   /// Supported Locales
   static final List<Locale> supportedLocales = [
     const Locale('en', 'US'),
+    const Locale('ur', 'PK'),
   ];
 }

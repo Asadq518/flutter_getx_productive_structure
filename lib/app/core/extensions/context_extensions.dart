@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 extension ContextExtensions on BuildContext {
-
   ColorScheme get colorScheme => Theme.of(this).colorScheme;
 
   /// return screen size
@@ -95,17 +94,22 @@ extension ContextExtensions on BuildContext {
 
   bool get isLinux => platform == TargetPlatform.linux;
 
+  // New Mobile, Tablet, Web checks based on screen width
+  bool get isMobile => screenWidth < 600; // Mobile if width is less than 600px
+  bool get isTabletCustom =>
+      screenWidth >= 600 &&
+      screenWidth < 1200; // Tablet between 600px and 1200px
+  bool get isWeb => screenWidth >= 1200; // Web if width is 1200px or more
+
   void openDrawer() => Scaffold.of(this).openDrawer();
 
   void openEndDrawer() => Scaffold.of(this).openEndDrawer();
-
 
   // bool isTablet() =>
   //     MediaQuery.of(this).size.width < desktopBreakpointGlobal &&
   //         MediaQuery.of(this).size.width >= tabletBreakpointGlobal;
 
   // bool isDesktop() => MediaQuery.of(this).size.width >= desktopBreakpointGlobal;
-
 
   void hideKeyboard() {
     FocusScope.of(this).unfocus();
