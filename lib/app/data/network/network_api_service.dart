@@ -1,9 +1,9 @@
 import 'dart:convert';
-
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:http/http.dart' as http;
 import 'package:pcom_app/utils/dialogs/internet_connectivity_dialog.dart';
 import 'package:pcom_app/utils/dialogs/session_expired.dart';
+import '../../../utils/helpers/internet_connectivity_check.dart';
 import 'base_api_services.dart';
 import 'dart:io';
 
@@ -11,12 +11,10 @@ class NetworkApiService extends BaseApiServices {
   // var dio = Dio();
 
   //========== First Flow ==============
-
   @override
   Future postApiResponse(data, String url) async {  
     try {
-      final connectivityResult = await (Connectivity().checkConnectivity());
-      if (connectivityResult != ConnectivityResult.none) {
+      if (await isConnectedToInternet()) {
         var response = await http.post(Uri.parse(url), body: data).timeout(
               const Duration(seconds: 15),
             );
@@ -37,8 +35,7 @@ class NetworkApiService extends BaseApiServices {
   @override
   Future postApiResponseWithToken(data, String url, String token) async {
     try {
-      final connectivityResult = await (Connectivity().checkConnectivity());
-      if (connectivityResult != ConnectivityResult.none) {
+      if ((await isConnectedToInternet())) {
         var response =
             await http.post(Uri.parse(url), body: jsonEncode(data), headers: {
           'Content-Type': 'application/json',
@@ -64,12 +61,10 @@ class NetworkApiService extends BaseApiServices {
   }
 
   //========== Second Flow ==============
-
   @override
   Future getApiResponseWithToken(String url, token) async {
     try {
-      final connectivityResult = await (Connectivity().checkConnectivity());
-      if (connectivityResult != ConnectivityResult.none) {
+      if (await isConnectedToInternet()) {
         var response = await http.get(Uri.parse(url), headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
@@ -94,13 +89,11 @@ class NetworkApiService extends BaseApiServices {
     }
   }
 
-//========== Update Profile  ==============
-
+  //========== Update Profile  ==============
   @override
   Future postApiResponseProfile(data, String url, String token) async {
     try {
-      final connectivityResult = await (Connectivity().checkConnectivity());
-      if (connectivityResult != ConnectivityResult.none) {
+      if (await isConnectedToInternet()) {
         if (data['image'].toString().isEmpty) {
           final finalData = jsonEncode(data);
           var response = await http
@@ -162,3 +155,4 @@ class NetworkApiService extends BaseApiServices {
 
   await(Future<ConnectivityResult> checkConnectivity) {}
 }
+

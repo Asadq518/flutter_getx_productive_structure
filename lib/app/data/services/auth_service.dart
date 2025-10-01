@@ -44,3 +44,4 @@ class AuthService {
     await _storage.deleteAll();
   }
 }
+
